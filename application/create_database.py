@@ -8,10 +8,12 @@ with app.app_context():
     my_dictionary = {'BusRider': 'A03', 'WheelerMann': 'A21', 'TravelGav': 'B05'}
     email_list = ['phoneyadam@gmail.com', 'mrexample2022@gmail.com', 'inboxcrook@hotmail.com']
 
+    default_customers = [{'customer_username': 'Busrider', 'email', 'payment_type', 'password', 'first_name':'Adam', 'last_name': 'Downey'}]
+
     print(my_dictionary.values())
 
-    for cust in my_dictionary.keys():
-        customer = Customer(customer_username=cust)
+    for cust in default_customers:
+        customer = Customer(customer_username=cust.customer_username)
         db.session.add(customer)
     db.session.commit()
 
