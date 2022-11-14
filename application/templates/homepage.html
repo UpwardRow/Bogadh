@@ -1,8 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <h1>
-            Welcome to Bogadh :)
-        </h1>
-    </body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+    <div class="form">
+        <!-- The empty actions means that it is going to the same route once the post is done -->
+        <form method='POST' action=''>
+        <!-- Adding CSRF token through hidden tag. Adds more protection -->
+            {{ form.hidden_tag() }}
+            {{ form.username.label }} {{ form.username }}
+            <br>
+            {{ form.password.label }} {{ form.password }}
+            <br>
+            {{ form.submit }}
+        </form>
+    </div>
+{% endblock content %}
