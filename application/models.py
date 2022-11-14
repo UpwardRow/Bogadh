@@ -32,6 +32,3 @@ class Route(db.Model):
     destination_address = db.Column(db.String(100), primary_key=False, nullable=False)
     origin_address = db.Column(db.String(100), primary_key=False, nullable=False)
     tickets = db.relationship('Ticket', backref='route')
-
-
-
