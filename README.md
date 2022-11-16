@@ -14,7 +14,7 @@ Much of the information for the columns is self explantory. Some columns need so
 ![Bogadh ERD](bogadh_erd_screenshot.png)
 
 ## CI Pipeline
-As mentioned, the project needed a few stages in it's CI pipeline. In the screenshot below there is a Jira screenshot of this project's board. The board was changed and reconsidered greatly as the marking scheme changed its deliverables. Most of the project has been completed, with descriptions in each Epic containing a child issue with allocated story points and a description. 
+As mentioned, the project needed a few stages in it's CI pipeline. In the screenshot below there is a Jira screenshot of this project's board. The board was changed and reconsidered greatly as the marking scheme changed its deliverables. Most of the project has been completed, with descriptions in each Epic containing a child issue with allocated story points and a description. The story points varied and gave an estimate on the difficulty of the task, with 4 being the highest. 
 
 ![Bogadh Jira](bogadh_jira_screenshot.png)
 
