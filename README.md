@@ -13,6 +13,7 @@ Much of the information for the columns is self explantory. Some columns need so
 
 ## CI Pipeline
 In the screenshot there is a Jira screenshot of this project's board. The board was changed and reconsidered greatly as the marking scheme changed its deliverables. Most of the project has been completed, with descriptions in each Epic containing a child issue with allocated story points and a description. 
+
 ![Bogadh Jira](bogadh_jira_screenshot)
 
 ## Future Development
