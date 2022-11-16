@@ -12,11 +12,13 @@ Much of the information for the columns is self explantory. Some columns need so
 ![Bogadh ERD](bogadh_erd_screenshot.png)
 
 ## CI Pipeline
-
-
-![]
+In the screenshot there is a Jira screenshot of this project's board. The board was changed and reconsidered greatly as the marking scheme changed its deliverables. Most of the project has been completed, with descriptions in each Epic containing a child issue with allocated story points and a description. 
+![Bogadh Jira](bogadh_jira_screenshot)
 
 ## Future Development
-Passwords are stored directly into the database. This is not secure as it is not hashed. Ideally in the the next sprint, the data would be hashed with bcrypt to increase data privacy
+Passwords are stored directly into the database. This is not secure as it is not hashed. Ideally in the the next sprint, the data would be hashed with bcrypt to increase data privacy.
 
+The login system was designed by me, which took more time than I had. Implementing Flask-Login would have been easier, more realistic, and quicker. In the next sprint redoing this design would be one of my first actions.
+
+Due to a lack of time and error handling within the application for the database relationships, the testing was not attempted. In future sprints testing the application with a high covereage would be a goal. 
 
