@@ -32,6 +32,9 @@ I used Flask's built in web server for the applicaiton. This was limited to a de
 
 ![Server](local_server.png)
 
+## Risk Assessment
+This risk assessment was conducted on the application which allowed 
+
 ## Future Development
 Passwords are stored directly into the database. This is not secure as it is not hashed. Ideally in the the next sprint, the data would be hashed with bcrypt to increase data privacy.
 
