@@ -18,7 +18,9 @@ As mentioned, the project needed a few stages in it's CI pipeline. In the screen
 
 ![Bogadh Jira](bogadh_jira_screenshot.png)
 
+![Bogadh Design ERD](design_erd_jira.png)
 
+![Bogadh Risk Assessment](risk_assessment_jira.png)
 
 [Link to the Jira board](https://adam-downey.atlassian.net/jira/software/projects/BOG/boards/2/roadmap?timeline=WEEKS)
 
