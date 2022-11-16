@@ -3,7 +3,7 @@ import random
 from application import app, db
 from flask import render_template, request, redirect, url_for, flash
 from application.forms import CustomerCredentials, TicketsBuy
-from application.models import Ticket, Route
+from application.models import Ticket, Route, Customer
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -66,15 +66,20 @@ def ticket_buy():
 
         route_instance = db.session.query(Route).filter_by(route_id="R01").first()
         print(route_instance)
+        customer_instance = db.session.query(Customer).filter_by(customer_username="BusRider").first()
 
-        # The route_id is a foreign key in the Ticket table. By connecting the column a route could have many tickets
+        '''
+        The route_id is a foreign key in the Ticket table. By connecting the column a route could have many tickets.
+        This is similar to customer which has many tickets
+        '''
         ticket_to_add = Ticket(user_comment=comment,
                                stage=stage,
                                departure_time_and_date=departure_time_and_date,
                                cost=cost,
                                order_date=order_date,
                                seat_no=seat_no,
-                               route=route_instance
+                               route=route_instance,
+                               customer=customer_instance
                                )
 
         db.session.add(ticket_to_add)

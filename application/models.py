@@ -14,7 +14,7 @@ class Customer(db.Model):
     password = db.Column(db.String(50), primary_key=False, nullable=False)
     first_name = db.Column(db.String(50), primary_key=False, nullable=False)
     last_name = db.Column(db.String(50), primary_key=False, nullable=False)
-    # tickets = db.relationship('Ticket', backref='customer')
+    tickets = db.relationship('Ticket', backref='customer')
 
 
 class Ticket(db.Model):
@@ -26,7 +26,7 @@ class Ticket(db.Model):
     cost = db.Column(db.Numeric, primary_key=False, nullable=False)
     stage = db.Column(db.Integer, primary_key=False, nullable=False)
     departure_time_and_date = db.Column(db.DateTime, primary_key=False, nullable=False)
-    # customer_customer_username = db.Column(db.String(20), db.ForeignKey('customer.customer_username'))
+    customer_customer_username = db.Column(db.String(20), db.ForeignKey('customer.customer_username'))
     route_route_id = db.Column(db.String(5), db.ForeignKey('route.route_id'))
 
 
