@@ -1,6 +1,8 @@
 # Bogadh Introduction
 An Irish bus transport full stack project for QA training. 'Bogadh' means 'to move' in Irish
 
+# Project Overview
+
 ## Project Brief
 The brief for the project at it's current state was to design a Flask web application which provided CRUD functionality from the created database. Tests were needed in this application with a project management tool and a version control system to host the source code. The brief had changed overtime, which affected my project management tool and project design. 
 
