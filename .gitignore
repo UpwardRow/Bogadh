@@ -124,3 +124,7 @@ dmypy.json
 
 # IntelliJ project files
 .idea/
+
+# Pycharm pycache
+pycache/
+*.pyc
