@@ -24,6 +24,10 @@ As mentioned, the project needed a few stages in it's CI pipeline. In the screen
 
 [Link to the Jira board](https://adam-downey.atlassian.net/jira/software/projects/BOG/boards/2/roadmap?timeline=WEEKS)
 
+This GitHub repo was used for the version control. Feature branch development was adapted, with multiple feature branches created that were pushed into dev, then pushed from dev into main once dev was stable. The screenshot shows this in use. Keep in mind that the direct pushes to main is the editing for the README.md file.
+
+![Branch Model](bogadh_branch_model.png)
+
 ## Future Development
 Passwords are stored directly into the database. This is not secure as it is not hashed. Ideally in the the next sprint, the data would be hashed with bcrypt to increase data privacy.
 
