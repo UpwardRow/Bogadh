@@ -48,15 +48,27 @@ Some of the risks that were considered and covered:
 As mentioned testing was not able to be completed because of the complication of the database and the timeframe that was given.
 
 ## The Application
-The login page is used for the user to insert their credentials to thenm be checked in the database and my custom validators in the models file. The idea was that the user logs in, and the username is saved to the session for the tickets, allowin the user to have tickets that they created. Errors with relationships caused this to not be implemented.
+The login page is used for the user to insert their credentials to thenm be checked in the database and my custom validators in the models file. The idea was that the user logs in, and the username is saved to the session for the tickets, allowing the user to have tickets that they created. Errors with relationships caused this to not be implemented.
+
+![Login Page](readme_images/login_bogadh_web_application.png)
 
 The tickets view has the base of CRUD functionality. We can see buying a ticket, viewing it, updating it, and deleting it. This is all styled with Bootstrap.
 
+![Tickets View](readme_images/tickets_overview_web_application.png)
+
 When a ticket is attempted to be purchased, a modal pops up on the screen with fields that are then passed to the form inside the applicaiton for database insertion. This does work for all of the keys except the foreign keys, which causes none of the data to be inserted. The error that shows is evidence that the data is being passed in.
+
+![Ticket Buy](readme_images/buy_ticket_bogadh_web_application.png)
+
+![Ticket Buy Error](readme_images/tickets_buy_error_web_application.png)
 
 This is the update modal for the application. The html is developed, but the actual functionality is only hardcoded. 
 
+![Ticket Update](readme_images/update_ticket_bogadh_web_application.png)
+
 The delete button only gives a warning when clicked, it is not functional beyond that.
+
+![Ticket Delete](readme_images/delete_ticket_bogadh_web_application.png)
 
 ## Known Issues
 * Passwords are stored directly into the database. This is not secure as it is not hashed. Ideally the data would be hashed with bcrypt to increase data privacy.
@@ -64,7 +76,6 @@ The delete button only gives a warning when clicked, it is not functional beyond
 * The login system was designed by me, which took more time than I had. Implementing Flask-Login would have been easier, more realistic, and quicker.
 
 * Due to a lack of time and error handling within the application for the database relationships, the testing was not attempted.
-
 
 ## Future Development
 As well as fixing the known issues, I would like to be able to let all of the tickets to be shown inside the container on screen, growing and shrinking as the tickets are added and deleted.
