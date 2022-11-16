@@ -14,9 +14,13 @@ Much of the information for the columns is self explantory. Some columns need so
 ![Bogadh ERD](bogadh_erd_screenshot.png)
 
 ## CI Pipeline
-In the screenshot there is a Jira screenshot of this project's board. The board was changed and reconsidered greatly as the marking scheme changed its deliverables. Most of the project has been completed, with descriptions in each Epic containing a child issue with allocated story points and a description. 
+As mentioned, the project needed a few stages in it's CI pipeline. In the screenshot below there is a Jira screenshot of this project's board. The board was changed and reconsidered greatly as the marking scheme changed its deliverables. Most of the project has been completed, with descriptions in each Epic containing a child issue with allocated story points and a description. 
 
 ![Bogadh Jira](bogadh_jira_screenshot.png)
+
+
+
+[Link to the Jira board](https://adam-downey.atlassian.net/jira/software/projects/BOG/boards/2/roadmap?timeline=WEEKS)
 
 ## Future Development
 Passwords are stored directly into the database. This is not secure as it is not hashed. Ideally in the the next sprint, the data would be hashed with bcrypt to increase data privacy.
