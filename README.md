@@ -28,6 +28,10 @@ This GitHub repo was used for the version control. Feature branch development wa
 
 ![Branch Model](branch_feature_evidence.png)
 
+I used Flask's built in web server for the applicaiton. This was limited to a development server and would not be viable for use in a production environment
+
+![Server](local_server.png)
+
 ## Future Development
 Passwords are stored directly into the database. This is not secure as it is not hashed. Ideally in the the next sprint, the data would be hashed with bcrypt to increase data privacy.
 
