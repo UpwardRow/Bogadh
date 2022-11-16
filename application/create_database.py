@@ -1,5 +1,5 @@
 from application import db, app
-from application.models import Customer, Ticket, Route
+from application.models import Customer, Route
 
 with app.app_context():
     db.drop_all()
@@ -97,11 +97,6 @@ with app.app_context():
     route_data_insert(galway_route)
     route_data_insert(cork_route)
     route_data_insert(donegal_route)
-
-    # for cust, seat in my_dictionary.items():
-    #     ticket = Ticket(seat_no=seat, customer_username=cust)
-    #     db.session.add(ticket)
-    # db.session.commit()
 
     # Checks if the customer_username is a foreign key, which it is
     # var1 = Ticket.query.join(Customer).all()

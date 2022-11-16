@@ -1,6 +1,185 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>
-      Welcome to your tickets!
-    </h1>
+<h1>
+    Bogadh
+</h1>
+<!-- Bootstrap utilization is present throughout the file. This makes the ticket CRUD functionality work with modals -->
+<div class="container">
+    <div class="row">
+        <div class="col md-12">
+            <!-- This adds a grey background to the tickets-->
+            <div class="jumbotron p-3">
+                <h2>Manage <b>Bus Tickets</b>
+                    <button type="button" class="btn btn-success float-right"
+                            data-toggle="modal" data-target="#ticketBuy">Buy New Ticket</button></h2>
+                <table class="table table-hover table-dark">
+                    <tr>
+                        <th>Destination</th>
+                        <th>Route ID</th>
+                        <th>Ticket ID</th>
+                        <th>Comment</th>
+                        <th>Cost</th>
+                        <th>Stage</th>
+                        <th>Departure Time and Date</th>
+                        <th>Username</th>
+                        <th>Bus ID</th>
+                        <th>Seat Number</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>BELFAST, CO. ANTRIM</td>
+                        <th>R01</th>
+                        <th>1</th>
+                        <th>Bringing luggage</th>
+                        <th>20.50</th>
+                        <th>1</th>
+                        <th>10:40, 16/11/2022</th>
+                        <th>BusRider</th>
+                        <th>NI01</th>
+                        <th>A30</th>
+                        <th>
+                            <!-- Update ticket -->
+                            <a href="" class="btn btn-info btn-xs"
+                               data-toggle="modal" data-target="#ticketUpdate">Update</a>
+                            <!-- Delete Ticket -->
+                            <a href="" class="btn btn-danger btn-xs" data-toggle="modal"
+                               onclick="return confirm('Ticket is going to be deleted, you will be refunded.')"
+                               data-target="#ticketsdelete">Delete</a>
+                        </th>
+                    </tr>
+                    <!-- This modal is for the update button -->
+                    <div class="modal" id="ticketUpdate" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Update ticket</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="" method="POST">
+                                        <div class="from-group">
+                                            <label>
+                                                Destination:
+                                            </label>
+                                            <input type="text" class="form-control" name="destination" value="BELFAST, CO. ANTRIM">
+                                        </div>
+                                        <div class="from-group">
+                                            <label>
+                                                Route ID:
+                                            </label>
+                                            <input type="text" class="form-control" name="route_id" value="R01">
+                                        </div>
+                                        <div class="from-group">
+                                            <label>
+                                                Ticket ID:
+                                            </label>
+                                            <input type="number" class="form-control" name="ticket_id" value="1">
+                                        </div>
+                                        <div class="from-group">
+                                            <label>
+                                                Comment:
+                                            </label>
+                                            <input type="text" class="form-control" name="comment" value="Brining luggage">
+                                        </div>
+                                        <div class="from-group">
+                                            <label>
+                                                Cost:
+                                            </label>
+                                            <input type="number" class="form-control" name="cost" value="20.50">
+                                        </div>
+                                        <div class="from-group">
+                                            <label>
+                                                Stage:
+                                            </label>
+                                            <input type="number" class="form-control" name="stage" value="1">
+                                        </div>
+                                        <div class="from-group">
+                                            <label>
+                                                Departure Time and Date:
+                                            </label>
+                                            <input type="datetime-local" class="form-control" name="departure_time_and_date" value="10:40, 16/11/2022">
+                                        </div>
+                                        <div class="from-group">
+                                            <label>
+                                                Username:
+                                            </label>
+                                            <input type="text" class="form-control" name="username" value="BusRider">
+                                        </div>
+                                        <div class="from-group">
+                                            <label>
+                                                Bus ID:
+                                            </label>
+                                            <input type="text" class="form-control" name="bus_id" value="NI01">
+                                        </div>
+                                        <div class="from-group">
+                                            <label>
+                                                Seat Number:
+                                            </label>
+                                            <input type="text" class="form-control" name="seat_no" value="A30">
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary" type="submit">Update The Ticket</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </table>
+                <!-- This is the ticket buy modal -->
+                <div class="modal" id="ticketBuy" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Buy Ticket</h5>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/ticket_buy" method="post" >
+                                    <div class="from-group">
+                                        <label>
+                                            Destination:
+                                        </label>
+                                        <input type="text" class="form-control" name="destination" required>
+                                    </div>
+                                    <div class="from-group">
+                                        <label>
+                                            Comment:
+                                        </label>
+                                        <input type="text" class="form-control" name="comment" required>
+                                    </div>
+                                    <div class="from-group">
+                                        <label>
+                                            Stage:
+                                        </label>
+                                        <input type="number" class="form-control" name="stage" required>
+                                    </div>
+                                    <div class="from-group">
+                                        <label>
+                                            Departure Time and Date:
+                                        </label>
+                                        <input type="datetime-local" class="form-control" name="departure_time_and_date" required>
+                                    </div>
+                                    <div class="from-group">
+                                        <label>
+                                            Username:
+                                        </label>
+                                        <input type="text" class="form-control" name="username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" type="submit" formaction="/ticket_buy">Buy Ticket</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
