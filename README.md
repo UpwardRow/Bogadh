@@ -35,12 +35,12 @@ I used Flask's built in web server for the applicaiton. This was limited to a de
 ## Risk Assessment
 This risk assessment was conducted on the application which allowed all of the risks to be considered before the application was developed. Some of the risks were not able to implemented given that the focus was elsewhere in the project.
 
-![Risk Assessment Screenshot](risk_assessment_excel_screenshot.png)
+![Risk Assessment Screenshot](excel_screenshot_risk_assessment.png)
 
 Some of the risks that were considered and covered:
 * SQL injection was able to be limited with the SQLAlchemy toolkit incorporated into the project.
 * Data of the wrong type was mostly covered because of custom and available validators
-* 
+* A feature branch development processes was adopted to lessen the impact of errors that may come from data corruption 
 
 ## Future Development
 Passwords are stored directly into the database. This is not secure as it is not hashed. Ideally in the the next sprint, the data would be hashed with bcrypt to increase data privacy.
