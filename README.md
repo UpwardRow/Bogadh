@@ -71,6 +71,8 @@ The delete button only gives a warning when clicked, it is not functional beyond
 ![Ticket Delete](readme_images/delete_ticket_bogadh_web_application.png)
 
 ## Known Issues
+* The relationship for the Ticket to the Route and Customer has been attempted, but is not functional. Fixing this issue would have allowed the CRUD functionality to be operating as expected. More research on how SQLAlchemy functions is needed for this.
+
 * Passwords are stored directly into the database. This is not secure as it is not hashed. Ideally the data would be hashed with bcrypt to increase data privacy.
 
 * The login system was designed by me, which took more time than I had. Implementing Flask-Login would have been easier, more realistic, and quicker.
